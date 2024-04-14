@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "Digital Numbers Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Digital Numbers Regular"),
+    url("https://cat-street.github.io/pomodoro-timer-react/static/media/DigitalNumbers-Regular.a1fd4994.woff")
+      format("woff");
+}
+
+.timer {
+  min-width: 285px;
+  min-height: 285px;
+  width: 50vmin;
+  height: 50vmin;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: black;
+  color: white;
+
+  border-radius: 50%;
+
+  font-family: "Teko", sans-serif;
+
+  box-shadow: 0 0 1px 2px black, 0 0 1px 8px #f1f1f1,
+    0 0 2px 10px rgba(0, 0, 0, 0.4), 4px 4px 2px 14px rgba(0, 0, 0, 0.6),
+    0 0 1px 14px #f1f1f1, 0 0 1px 15px rgba(0, 0, 0, 0.8),
+    0 0 1px 16px rgba(255, 255, 255, 0.6), 0 0 1px 17px black;
+}
+
+.timer::before {
+  content: "";
+
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 1vmin;
+  right: 1vmin;
+
+  background: linear-gradient(40deg, #000 60%, #e1e1e1 95%);
+  box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.8),
+    0 0 6px 0 rgba(255, 255, 255, 0.6), 0 0 8px 0 rgba(255, 255, 255, 0.4);
+
+  border-radius: 50%;
+}
+
+.timer__top {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 3vmin;
+
+  font-size: clamp(1.3rem, 2.5vmin, 2.5vmin);
+
+  z-index: 1;
+}
+
+.timer__small-value {
+  font-family: "Digital Numbers Regular", sans-serif;
+  text-align: center;
+
+  display: block;
+
+  min-width: 5vmin;
+}
+
+.timer__small-section {
+  margin: 0 2vmin;
+}
+
+.timer__small-label {
+  margin: 0.2vmin 0;
+  text-align: center;
+}
+
+.timer__small-display {
+  display: flex;
+  justify-content: space-between;
+
+  letter-spacing: -0.2vmin;
+}
+
+.button {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  outline: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  color: white;
+  opacity: 0.5;
+
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.button:hover,
+.button:focus {
+  opacity: 1;
+
+  box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.9),
+    0 0 4px 0 rgba(255, 255, 255, 0.4), 0 0 6px 0 rgba(255, 255, 255, 0.2);
+}
+
+.button_type_small {
+  width: 3vmin;
+  height: 3vmin;
+  min-width: 1.6rem;
+  min-height: 1.6rem;
+
+  font-size: 1rem;
+}
+
+.body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: repeating-radial-gradient(
+    circle at center,
+    #434343 10%,
+    #302f2f 15%,
+    #161616 25%,
+    #434343 25.3%
+  );
+  background-attachment: fixed;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+.timer__buttons {
+  display: flex;
+  margin-top: 2vmin;
+
+  z-index: 1;
+}
+
+.button_type_big {
+  width: 5vmin;
+  height: 5vmin;
+  min-width: 2.6rem;
+  min-height: 2.6rem;
+
+  margin: 0 0.5vmin;
+
+  font-size: 1.3rem;
+}
+
+.timer__display {
+  z-index: 1;
+}
+
+.timer__label {
+  margin: 2vmin 0 0.2vmin;
+
+  text-align: center;
+  font-size: clamp(2rem, 4.5vmin, 4.5vmin);
+}
+
+.timer__time-left {
+  font-family: "Digital Numbers Regular", sans-serif;
+  font-size: clamp(4rem, 8vmin, 8vmin);
+  letter-spacing: -0.6rem;
+}
